@@ -8,7 +8,7 @@ cat << EOF
      %                                                                            %
      %+++++++++++++++++++++++++++++++ SERVER INFO ++++++++++++++++++++++++++++++++%
      %                                                                            %
-              Name: 'hostname'
+              Name: `hostname`
               Uptime: $UPTIME_DAYS days, $UPTIME_HOURS hours, $UPTIME_MINUTES minutes
 
               CPU: `cat /proc/cpuinfo | grep 'model name' | head -1 | cut -d':' -f2`
@@ -24,6 +24,4 @@ cat << EOF
 
               External Address: `ifconfig ens160 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
               Internal Address: `ifconfig ens192 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
-              IP Adresses:
-              `/sbin/ifconfig | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}' | tr '\n' '\n\t\t\t'`
 EOF
