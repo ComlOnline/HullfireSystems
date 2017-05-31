@@ -24,6 +24,6 @@ cat << EOF
 
               External Address: `ifconfig ens160 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
               Internal Address: `ifconfig ens192 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
-			  1: `/sbin/ifconfig | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}' | tr '\n' ' '`
-			  2: `/sbin/ifconfig | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'`
+              IP Adresses:
+              `/sbin/ifconfig | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}' | tr '\n' '\n              '`
 EOF
