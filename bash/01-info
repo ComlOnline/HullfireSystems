@@ -22,6 +22,6 @@ cat << EOF
               Free Swap: `free -m | tail -n 1 | awk {'print $4'}`M
               Free Disk: `df -h / | awk '{ a = $2 } END { print a }'`
 
-              Public Address: `ifconfig eth0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
-              Cloud Address: `ifconfig eth1 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
+              External Address: `ifconfig ens160 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
+              Internal Address: `ifconfig ens192 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
 EOF
