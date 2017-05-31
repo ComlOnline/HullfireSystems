@@ -8,13 +8,14 @@ sudo rm /etc/update-motd.d/10-help-text
 sudo rm /etc/update-motd.d/00-header
 sudo rm /etc/update-motd.d/00-logo
 sudo rm /etc/update-motd.d/01-distro
+sudo rm /etc/update-motd.d/01-info
 
 sudo cp ./00-logo /etc/update-motd.d/00-logo
-sudo cp ./01-distro /etc/update-motd.d/01-distro
+sudo cp ./01-info /etc/update-motd.d/01-info
 
 
 sudo chmod +x /etc/update-motd.d/00-logo
-sudo chmod +x /etc/update-motd.d/01-distro
+sudo chmod +x /etc/update-motd.d/01-info
 
 
 cat <<EOF >> ~/.bashrc
