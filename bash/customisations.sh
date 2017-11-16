@@ -14,14 +14,14 @@ sudo rm /etc/update-motd.d/01-distro
 sudo rm /etc/update-motd.d/01-info
 
 #Script to make the logo
-cat <<EOF00 >> /etc/update-motd.d/00-logo
+sudo cat <<EOF00 >> /etc/update-motd.d/00-logo
 #! /bin/bash
 
 figlet "Hullfire Systems"
 EOF00
 
 #Script to display system info
-cat <<EOF01 >> /etc/update-motd.d/01-info
+sudo cat <<EOF01 >> /etc/update-motd.d/01-info
 #!/bin/sh
 
 UPTIME_DAYS=$(expr `cat /proc/uptime | cut -d '.' -f1` % 31556926 / 86400)
